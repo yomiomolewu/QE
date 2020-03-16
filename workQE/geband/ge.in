@@ -1,0 +1,33 @@
+&CONTROL
+  calculation='scf',
+  outdir='.',
+  prefix='geband',
+  pseudo_dir='.',
+  verbosity='low',
+  tprnfor=.true.,
+  tstress=.true.,
+/
+
+
+ &system
+    ibrav =  2, 
+    celldm(1) = 10.690841,
+    nat =  2, 
+    ntyp = 1,
+    nbnd =8,
+    ecutwfc = 20,
+ /
+ &electrons
+    mixing_beta = 0.7
+ /
+
+ATOMIC_SPECIES
+ Ge 73.630  Ge.pbe-kjpaw.UPF
+
+ATOMIC_POSITIONS (alat)
+ Ge 0.0 0.0 0.0
+ Ge 0.25 0.25 0.25
+
+K_POINTS (automatic)
+  6 6 6 1 1 1
+

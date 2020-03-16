@@ -1,0 +1,6 @@
+set title "FCC Co-Total Energy vs Lattice Parameter a"
+set xlabel "lattice parameter a (a.u)"
+set ylabel "Total Energy (Ry)"
+set term pdf
+set output "fccCo.pdf
+plot "latpara_v_etot.dat" with lines title "Results" 

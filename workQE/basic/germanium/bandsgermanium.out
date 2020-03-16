@@ -1,0 +1,178 @@
+
+     Program PWSCF v.6.4.1 starts on 21Jan2020 at 19:26:49 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     1 processors
+
+     MPI processes distributed on     1 nodes
+     Reading input from bandsgermanium.in
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  3
+     Message from routine volume:
+     axis vectors are left-handed
+
+     Atomic positions and unit cell read from directory:
+     ./germanium.save/
+     Message from routine volume:
+     axis vectors are left-handed
+
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation      = PBE ( 1  4  3  4 0 0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+               file Ge.pbe-kjpaw.UPF: wavefunction(s)  4S renormalized
+
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     a serial algorithm will be used
+
+     Message from routine setup:
+     DEPRECATED: symmetry with ibrav=0, use correct ibrav instead
+
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum         793     793    241                14553    14553    2421
+
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =      10.6908  a.u.
+     unit-cell volume          =     305.4751 (a.u.)^3
+     number of atoms/cell      =            2
+     number of atomic types    =            1
+     number of electrons       =         8.00
+     number of Kohn-Sham states=           10
+     kinetic-energy cutoff     =      50.0000  Ry
+     charge density cutoff     =     200.0000  Ry
+     Exchange-correlation      = PBE ( 1  4  3  4 0 0)
+
+     celldm(1)=  10.690842  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   0.500000   0.500000   0.000000 )  
+               a(2) = (   0.500000   0.000000   0.500000 )  
+               a(3) = (   0.000000   0.500000   0.500000 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000  1.000000 -1.000000 )  
+               b(2) = (  1.000000 -1.000000  1.000000 )  
+               b(3) = ( -1.000000  1.000000  1.000000 )  
+
+
+     PseudoPot. # 1 for Ge read from file:
+     ./Ge.pbe-kjpaw.UPF
+     MD5 check sum: fa6acec385508fbd41db1ad5f2fba766
+     Pseudo is Projector augmented-wave + core cor, Zval =  4.0
+     Generated using "atomic" code by A. Dal Corso (espresso distribution)
+     Shape of augmentation charge: BESSEL
+     Using radial grid of 1207 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     atomic species   valence    mass     pseudopotential
+        Ge             4.00    72.63000     Ge( 1.00)
+
+     48 Sym. Ops., with inversion, found (24 have fractional translation)
+
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           Ge  tau(   1) = (   0.0000000   0.0000000   0.0000000  )
+         2           Ge  tau(   2) = (   0.2500000   0.2500000   0.2500000  )
+
+     number of k points=   301  Marzari-Vanderbilt smearing, width (Ry)=  0.0050
+
+     Number of k-points >= 100: set verbosity='high' to print them.
+
+     Dense  grid:    14553 G-vectors     FFT dimensions: (  36,  36,  36)
+
+     Estimated max dynamical RAM per process >      16.39 MB
+
+     The potential is recalculated from file :
+     ./germanium.save/charge-density
+
+
+     negative rho (up, down):  4.877E-02 0.000E+00
+     Starting wfcs are    8 randomized atomic wfcs +    2 random wfcs
+     Checking if some PAW data can be deallocated... 
+
+     Band Structure Calculation
+     Davidson diagonalization with overlap
+
+     ethr =  1.25E-10,  avg # of iterations = 20.8
+
+     total cpu time spent up to now is       82.5 secs
+
+     End of band structure calculation
+
+     Number of k-points >= 100: set verbosity='high' to print the bands.
+
+     Writing output data file germanium.save/
+
+     init_run     :      0.62s CPU      0.69s WALL (       1 calls)
+     electrons    :     78.78s CPU     80.79s WALL (       1 calls)
+
+     Called by init_run:
+     wfcinit      :      0.00s CPU      0.00s WALL (       1 calls)
+     potinit      :      0.15s CPU      0.21s WALL (       1 calls)
+     hinit0       :      0.45s CPU      0.46s WALL (       1 calls)
+
+     Called by electrons:
+     c_bands      :     78.78s CPU     80.79s WALL (       1 calls)
+     v_of_rho     :      0.03s CPU      0.03s WALL (       1 calls)
+     newd         :      0.01s CPU      0.01s WALL (       1 calls)
+     PAW_pot      :      0.11s CPU      0.11s WALL (       1 calls)
+
+     Called by c_bands:
+     init_us_2    :      0.12s CPU      0.13s WALL (     301 calls)
+     cegterg      :     73.99s CPU     74.90s WALL (     410 calls)
+
+     Called by sum_band:
+
+     Called by *egterg:
+     h_psi        :     56.45s CPU     57.21s WALL (    6986 calls)
+     s_psi        :      2.19s CPU      2.22s WALL (    6986 calls)
+     g_psi        :      0.54s CPU      0.54s WALL (    6275 calls)
+     cdiaghg      :      2.18s CPU      2.22s WALL (    6576 calls)
+
+     Called by h_psi:
+     h_psi:pot    :     56.25s CPU     57.01s WALL (    6986 calls)
+     h_psi:calbec :      2.29s CPU      2.32s WALL (    6986 calls)
+     vloc_psi     :     51.74s CPU     52.45s WALL (    6986 calls)
+     add_vuspsi   :      2.17s CPU      2.20s WALL (    6986 calls)
+
+     General routines
+     calbec       :      2.26s CPU      2.29s WALL (    6986 calls)
+     fft          :      0.02s CPU      0.02s WALL (      12 calls)
+     fftw         :     46.68s CPU     47.40s WALL (   88326 calls)
+     davcio       :      0.06s CPU      4.23s WALL (     602 calls)
+
+     Parallel routines
+
+     PWSCF        :   1m20.51s CPU   1m27.28s WALL
+
+
+   This run was terminated on:  19:28:16  21Jan2020            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

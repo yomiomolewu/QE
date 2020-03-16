@@ -1,0 +1,2 @@
+awk '/kinetic-energy/{ecutwfc=$4}/ charge density/{ecutrho=$5}/kbar/ {print FILENAME, ecutwfc, ecutrho, $6}' halite_7_90*out|sort -k 3n >> kmesh2.txt 
+

@@ -1,0 +1,6 @@
+set title "HPC Co-Total Energy vs Lattice Parameter c"
+set xlabel "lattice parameter c (a.u)"
+set ylabel "Energy (Ry)"
+set term pdf
+set output "c_a.pdf
+plot "c448.dat" with lines title "a = 4.48 (a.u)", "c450.dat" with lines title "a = 4.50 (a.u)", "c452.dat" with lines title "a = 4.52 (a.u)", "c454.dat" with lines title "a = 4.54 (a.u)", "c456.dat" with lines title "a = 4.56 (a.u)", "c458.dat" with lines title "a = 4.58 (a.u)", "c460.dat" with lines title "a = 4.60 (a.u)", "c462.dat" with lines title "a = 4.62 (a.u)", "c464.dat" with lines title "a = 4.64 (a.u)", "c466.dat" with lines title "a = 4.66 (a.u)", "c466.dat" with lines title "a = 4.66 (a.u)" 
